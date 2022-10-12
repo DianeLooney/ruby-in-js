@@ -17,3 +17,20 @@ with(x) {
   fruits = () => `${apple} ${banana}`
 }
 x.fruits
+
+with(x) {
+  counter = 0
+  inc = () => { counter = counter + 1 }
+}
+/*
+> x.counter
+0
+> x.inc
+> x.counter
+1
+> x.inc
+> x.inc
+> x.inc
+> x.counter
+5
+*/
